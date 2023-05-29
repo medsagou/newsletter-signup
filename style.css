@@ -91,11 +91,17 @@ select {
 
 body {
   font-family: var(--ff-primary);
+  background-color: var(--primary-500);
+  display: grid;
+  place-items: center;
 }
 
 main {
   display: flex;
   padding: 3rem;
+  background-color: var(--neutral-100);
+  max-width: max-content;
+  border-radius: 2rem;
 }
 main .containr {
   display: flex;
@@ -107,7 +113,7 @@ main .containr {
 ul {
   margin: 0;
   padding: 0;
-  margin-block: 2rem;
+  margin-block: 1rem;
 }
 
 ul li {
@@ -115,6 +121,8 @@ ul li {
   margin-top: 1rem;
   margin-left: 2rem;
   position: relative;
+  color: var(--primary-500);
+  font-size: 0.9rem;
 }
 
 ul li::before {
@@ -126,9 +134,47 @@ ul li::before {
 h1 {
   font-weight: 700;
   font-size: 3rem;
+  color: var(--primary-500);
 }
 p {
   font-weight: 400;
   font-size: 0.9rem;
   max-width: 80%;
+  color: var(--primary-500);
+}
+
+/* form styling */
+form {
+  display: flex;
+  margin-block: 1rem;
+  flex-direction: column;
+  max-width: 80%;
+}
+form input,
+form button {
+  padding-block: 0.8rem;
+  margin-block: 0.5rem;
+  border-radius: 0.5rem;
+  border-color: var(--primary-300);
+}
+
+form label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-500);
+}
+form input {
+  padding-inline: 1rem;
+}
+form input::placeholder {
+  color: var(--primary-300);
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+form button {
+  background-color: var(--primary-400);
+  border: none;
+  color: var(--neutral-100);
+  font-weight: 700;
 }
